@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import faviconImg from "@/assets/remax.jpg";
 import { TRACKING } from "@/lib/tracking";
 
 function NotFoundComponent() {
@@ -56,6 +57,8 @@ export const Route = createRootRoute({
   head: () => ({
     meta: metaTags,
     links: [
+      { rel: "icon", type: "image/jpeg", href: faviconImg },
+      { rel: "apple-touch-icon", href: faviconImg },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
