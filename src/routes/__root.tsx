@@ -1,7 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import faviconImg from "@/assets/remax.jpg";
+import faviconImg from "@/assets/favicon.png";
 import { TRACKING } from "@/lib/tracking";
 
 function NotFoundComponent() {
