@@ -37,7 +37,7 @@ export function ComoFunciona() {
             <span className="block text-primary">asesor/a inmobiliario independiente</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Sin inversión en local, sin stock, sin empleados. Tú aportas el talento comercial,
+            Sin inversión en local, sin horarios fijos, sin empleados. Tú aportas el talento comercial,
             RE/MAX te da las herramientas.
           </p>
         </div>

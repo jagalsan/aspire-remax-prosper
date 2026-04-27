@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Modelo probado de asesor/a inmobiliario independiente con el respaldo de RE/MAX en Almería.",
+          "Modelo probado de asesor/a inmobiliario independiente con el respaldo de RE/MAX Solución",
       },
     ],
   }),

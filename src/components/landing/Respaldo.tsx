@@ -36,7 +36,7 @@ export function Respaldo() {
             Respaldo
           </span>
           <h2 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Por qué <span className="text-primary">RE/MAX Solución</span> en Almería
+            Por qué <span className="text-primary">RE/MAX Solución</span>
           </h2>
           <p className="mt-4 text-lg text-white/80">
             La fuerza de una marca global con la cercanía de un equipo local que te conoce por tu nombre.

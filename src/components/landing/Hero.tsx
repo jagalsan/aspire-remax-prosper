@@ -27,7 +27,7 @@ export function Hero() {
           </span>
           <h1 className="mt-6 text-balance text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
             Tu negocio inmobiliario en Almería.
-            <span className="block text-primary-foreground/90">Sin local. Sin empleados.</span>
+            <span className="block text-primary-foreground/90">Sin local. Sin horarios.</span>
             <span className="block">Con el respaldo de RE/MAX.</span>
           </h1>
           <p className="mt-6 max-w-xl text-balance text-lg text-white/90 sm:text-xl">
