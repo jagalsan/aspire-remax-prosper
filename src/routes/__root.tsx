@@ -1,4 +1,5 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useNavigate } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 import faviconImg from "@/assets/favicon.png";
@@ -6,20 +7,35 @@ import { TRACKING } from "@/lib/tracking";
 import { CookieBanner } from "@/components/CookieBanner";
 
 function NotFoundComponent() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Redirigir a la home después de 2 segundos
+    const timer = setTimeout(() => {
+      navigate({ to: "/" });
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <div className="flex min-h-screen items-center justify-center bg-gradient-primary px-4">
+      <div className="max-w-2xl text-center">
+        <div className="mb-8">
+          <div className="mx-auto h-20 w-20 animate-spin rounded-full border-4 border-white/20 border-t-white" />
+        </div>
+        <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          Redirigiendo...
+        </h2>
+        <p className="mt-4 text-lg text-white/90">
+          La página que buscas no existe. Te estamos redirigiendo al inicio.
         </p>
-        <div className="mt-6">
+        <div className="mt-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-primary transition-all hover:bg-white/90 hover:scale-105"
           >
-            Go home
+            Ir al inicio ahora
           </Link>
         </div>
       </div>

@@ -27,18 +27,36 @@ export function CookieBanner() {
     analytics: false,
     marketing: false,
   });
+  const [mounted, setMounted] = useState(false);
+  const [hasConsent, setHasConsent] = useState(false);
 
   useEffect(() => {
-    // Verificar si ya hay consentimiento guardado
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (!consent) {
-      // Mostrar banner después de un pequeño delay
-      setTimeout(() => setShowBanner(true), 1000);
+    setMounted(true);
+    
+    // Verificar si ya hay consentimiento guardado (solo en el cliente)
+    if (typeof window !== "undefined") {
+      const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+      if (!consent) {
+        // Mostrar banner después de un pequeño delay
+        setTimeout(() => setShowBanner(true), 1000);
+        setHasConsent(false);
+      } else {
+        // Si ya hay consentimiento, cargar las preferencias
+        setHasConsent(true);
+        try {
+          const savedPrefs = JSON.parse(consent);
+          setPreferences(savedPrefs);
+        } catch (e) {
+          console.error("Error al cargar preferencias de cookies", e);
+        }
+      }
     }
   }, []);
 
   const savePreferences = (prefs: CookiePreferences) => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(prefs));
+    if (typeof window !== "undefined") {
+      localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(prefs));
+    }
     setShowBanner(false);
     setShowSettings(false);
 
@@ -75,12 +93,28 @@ export function CookieBanner() {
     savePreferences(preferences);
   };
 
-  if (!showBanner) return null;
+  // No renderizar nada hasta que el componente esté montado en el cliente
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>
+      {/* Botón Flotante - Siempre visible si ya hay consentimiento */}
+      {hasConsent && !showBanner && (
+        <button
+          onClick={() => setShowSettings(true)}
+          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          aria-label="Configuración de cookies"
+          title="Configuración de cookies"
+        >
+          <Cookie className="h-6 w-6 text-white" />
+        </button>
+      )}
+
       {/* Banner Principal */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border shadow-2xl">
+      {showBanner && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border shadow-2xl">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="flex items-start gap-3 flex-1">
@@ -133,7 +167,8 @@ export function CookieBanner() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      )}
 
       {/* Modal de Configuración */}
       <Dialog open={showSettings} onOpenChange={setShowSettings}>

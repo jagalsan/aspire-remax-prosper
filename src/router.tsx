@@ -5,12 +5,12 @@ function DefaultErrorComponent({ error, reset }: { error: Error; reset: () => vo
   const router = useRouter();
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-primary px-4">
+      <div className="max-w-2xl text-center">
+        <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 text-destructive"
+            className="h-10 w-10 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -23,30 +23,50 @@ function DefaultErrorComponent({ error, reset }: { error: Error; reset: () => vo
             />
           </svg>
         </div>
-        <h1 className="text-2xl font-bold tracking-tight text-foreground">Something went wrong</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          An unexpected error occurred. Please try again.
+        <h1 className="text-3xl font-bold text-white sm:text-4xl">
+          Algo salió mal
+        </h1>
+        <p className="mt-4 text-lg text-white/90">
+          Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo.
         </p>
         {import.meta.env.DEV && error.message && (
-          <pre className="mt-4 max-h-40 overflow-auto rounded-md bg-muted p-3 text-left font-mono text-xs text-destructive">
-            {error.message}
-          </pre>
+          <div className="mt-6 mx-auto max-w-lg">
+            <details className="rounded-lg bg-white/10 backdrop-blur-sm p-4 text-left">
+              <summary className="cursor-pointer text-sm font-semibold text-white/90 hover:text-white">
+                Detalles del error (solo en desarrollo)
+              </summary>
+              <pre className="mt-3 max-h-40 overflow-auto rounded-md bg-black/20 p-3 font-mono text-xs text-white/80">
+                {error.message}
+                {error.stack && `\n\n${error.stack}`}
+              </pre>
+            </details>
+          </div>
         )}
-        <div className="mt-6 flex items-center justify-center gap-3">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <button
             onClick={() => {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-primary transition-all hover:bg-white/90 hover:scale-105"
           >
-            Try again
+            Intentar de nuevo
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 bg-white/10 px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
           >
-            Go home
+            Volver al inicio
+          </a>
+        </div>
+        <div className="mt-6">
+          <a
+            href="https://wa.me/34662257024?text=Hola%2C%20he%20encontrado%20un%20error%20en%20la%20web"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white/70 underline hover:text-white"
+          >
+            ¿Necesitas ayuda? Contáctanos por WhatsApp
           </a>
         </div>
       </div>
