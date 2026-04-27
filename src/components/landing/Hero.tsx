@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle, ShieldCheck, Globe2, Clock } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Globe2, Clock, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-asesora.jpg";
 
@@ -74,6 +74,20 @@ export function Hero() {
 
         <div className="hidden lg:block" aria-hidden="true" />
       </div>
+
+      <a
+        href="#perfil"
+        aria-label="Desplázate para ver más"
+        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/80 transition hover:text-white sm:flex"
+      >
+        <span className="text-[11px] font-semibold uppercase tracking-[0.2em]">
+          Descubre más
+        </span>
+        <span className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/60 p-1">
+          <span className="h-2 w-1 animate-scroll-dot rounded-full bg-white/90" />
+        </span>
+        <ChevronDown className="h-4 w-4 animate-bounce" />
+      </a>
     </section>
   );
 }
