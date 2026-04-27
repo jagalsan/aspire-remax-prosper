@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle, ShieldCheck, Globe2, Clock } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Globe2, Clock, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-asesora.jpg";
 
