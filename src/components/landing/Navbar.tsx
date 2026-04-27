@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#top" className="flex items-center gap-2">
           <span className="text-2xl font-extrabold tracking-tight text-primary">RE/MAX</span>
-          <span className="text-sm font-semibold text-muted-foreground">Solución · Almería</span>
+          <span className="text-sm font-semibold text-muted-foreground">Solución</span>
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           <a href="#filtro" className="text-muted-foreground transition-colors hover:text-foreground">

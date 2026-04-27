@@ -82,8 +82,7 @@ export function Formulario() {
             ¿Listo/a para emprender con respaldo RE/MAX?
           </h2>
           <p className="mt-4 text-lg text-white/90">
-            Déjanos tus datos y te contamos cómo funciona el proceso de incorporación.
-            <span className="block">Sin compromiso. Sin letra pequeña.</span>
+            Déjanos tus datos y agendamos una breve reunión-entrevista donde vemos cuándo te puedes incorporar a RE/MAX Solución.
           </p>
         </div>
 
