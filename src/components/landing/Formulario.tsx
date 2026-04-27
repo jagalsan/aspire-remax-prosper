@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { MessageCircle, Phone, Send, CheckCircle2 } from "lucide-react";
+import { MessageCircle, Phone, Send, CheckCircle2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -35,6 +35,7 @@ export function Formulario() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [enviado, setEnviado] = useState(false);
   const [enviando, setEnviando] = useState(false);
+  const [rechazadoAutonomo, setRechazadoAutonomo] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -60,6 +61,18 @@ export function Formulario() {
       setErrors(errs);
       return;
     }
+
+    // Validación especial: si no está dispuesto a darse de alta como autónomo
+    if (data.autonomo === "no") {
+      setErrors({});
+      setEnviando(true);
+      setTimeout(() => {
+        setEnviando(false);
+        setRechazadoAutonomo(true);
+      }, 800);
+      return;
+    }
+
     setErrors({});
     setEnviando(true);
     // Simulated submit — wire to backend later
@@ -87,7 +100,37 @@ export function Formulario() {
         </div>
 
         <div className="mt-12 rounded-2xl bg-card p-6 shadow-card sm:p-10">
-          {enviado ? (
+          {rechazadoAutonomo ? (
+            <div className="flex flex-col items-center py-12 text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <X className="h-8 w-8 text-primary" strokeWidth={2.5} />
+              </div>
+              <h3 className="mt-4 text-2xl font-bold">Lo sentimos</h3>
+              <p className="mt-2 max-w-md text-muted-foreground">
+                Darse de alta como autónomo/a es un <strong>requisito obligatorio</strong> para poder 
+                formar parte de RE/MAX Solución como asesor/a inmobiliario independiente.
+              </p>
+              <p className="mt-3 max-w-md text-sm text-muted-foreground">
+                Este modelo de negocio requiere que operes como profesional independiente. 
+                Si cambias de opinión en el futuro, estaremos encantados de hablar contigo.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <Button variant="whatsapp" size="lg">
+                    <MessageCircle className="h-5 w-5" />
+                    Consultar dudas por WhatsApp
+                  </Button>
+                </a>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => setRechazadoAutonomo(false)}
+                >
+                  Volver al formulario
+                </Button>
+              </div>
+            </div>
+          ) : enviado ? (
             <div className="flex flex-col items-center py-12 text-center">
               <CheckCircle2 className="h-16 w-16 text-success" />
               <h3 className="mt-4 text-2xl font-bold">¡Solicitud enviada!</h3>

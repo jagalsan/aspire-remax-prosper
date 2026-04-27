@@ -103,7 +103,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/60">
-          © {new Date().getFullYear()} RE/MAX Solución — Almería. Todos los derechos reservados.
+          © {new Date().getFullYear()} RE/MAX Solución — Estamos en Almería y en Roquetas de Mar. Todos los derechos reservados.
         </div>
       </div>
     </footer>
