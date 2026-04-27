@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
@@ -47,9 +48,9 @@ export function Footer() {
               Legal
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-white/80">
-              <li><a href="#" className="hover:text-white">Política de privacidad</a></li>
-              <li><a href="#" className="hover:text-white">Aviso legal</a></li>
-              <li><a href="#" className="hover:text-white">Política de cookies</a></li>
+              <li><Link to="/politica-privacidad" className="hover:text-white">Política de privacidad</Link></li>
+              <li><Link to="/aviso-legal" className="hover:text-white">Aviso legal</Link></li>
+              <li><Link to="/politica-privacidad" className="hover:text-white">Política de cookies</Link></li>
             </ul>
           </div>
         </div>
