@@ -24,6 +24,9 @@ const schema = z.object({
   edad: z.string().min(1, "Selecciona tu rango de edad"),
   experiencia: z.string().min(1, "Selecciona tu experiencia"),
   estabilidad: z.string().min(1, "Indica tu situación"),
+  autonomo: z.enum(["si", "no"], {
+    errorMap: () => ({ message: "Indica si estás dispuesto/a a darte de alta como autónomo/a" }),
+  }),
   mensaje: z.string().max(1000).optional(),
   privacidad: z.literal(true, { errorMap: () => ({ message: "Debes aceptar la política" }) }),
 });
@@ -43,6 +46,7 @@ export function Formulario() {
       edad: String(fd.get("edad") ?? ""),
       experiencia: String(fd.get("experiencia") ?? ""),
       estabilidad: String(fd.get("estabilidad") ?? ""),
+      autonomo: String(fd.get("autonomo") ?? ""),
       mensaje: String(fd.get("mensaje") ?? ""),
       privacidad: fd.get("privacidad") === "on",
     };
@@ -156,6 +160,26 @@ export function Formulario() {
                   </div>
                 </RadioGroup>
                 {errors.estabilidad && <p className="mt-1 text-sm text-primary">{errors.estabilidad}</p>}
+              </div>
+
+              <div className="sm:col-span-2 rounded-xl border-2 border-primary/30 bg-primary-soft/40 p-4">
+                <Label className="text-base font-semibold text-foreground">
+                  ¿Estás dispuesto/a a darte de alta como autónomo/a? *
+                </Label>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Es un requisito imprescindible para operar como asesor/a independiente RE/MAX.
+                </p>
+                <RadioGroup name="autonomo" className="mt-3 flex flex-col gap-3 sm:flex-row sm:gap-6">
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="si" id="auto-si" />
+                    <Label htmlFor="auto-si" className="font-normal">Sí, estoy dispuesto/a</Label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <RadioGroupItem value="no" id="auto-no" />
+                    <Label htmlFor="auto-no" className="font-normal">No</Label>
+                  </div>
+                </RadioGroup>
+                {errors.autonomo && <p className="mt-2 text-sm text-primary">{errors.autonomo}</p>}
               </div>
 
               <div className="sm:col-span-2">
