@@ -1,5 +1,23 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+
+const SOCIALS = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/remax.solucion/",
+    Icon: Instagram,
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/gruporemaxsolucion",
+    Icon: Facebook,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/grupo-re-max-soluci%C3%B3n/",
+    Icon: Linkedin,
+  },
+];
 
 export function Footer() {
   return (
