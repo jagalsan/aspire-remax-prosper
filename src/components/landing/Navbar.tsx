@@ -27,7 +27,7 @@ export function Navbar() {
           </a>
         </nav>
         <div className="flex items-center gap-2">
-          <a href="tel:+34000000000" className="hidden sm:inline-flex">
+          <a href="tel:+34662257024" className="hidden sm:inline-flex">
             <Button variant="ghost" size="sm">
               <Phone className="h-4 w-4" />
               Llamar
