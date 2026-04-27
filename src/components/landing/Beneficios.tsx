@@ -4,7 +4,7 @@ const items = [
   {
     icon: Building2,
     title: "Sin inversión inicial",
-    body: "No necesitas local. Trabaja desde donde quieras: casa, cafetería, co-working. Tú decides.",
+    body: "No necesitas local. Trabaja desde las oficinas de RE/MAX Solución en Almería capital o Roquetas de Mar, o desde tu propia casa.",
   },
   {
     icon: User,
