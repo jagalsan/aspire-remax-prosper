@@ -1,26 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/landing/Navbar";
+import { Hero } from "@/components/landing/Hero";
+import { Filtro } from "@/components/landing/Filtro";
+import { ComoFunciona } from "@/components/landing/ComoFunciona";
+import { Beneficios } from "@/components/landing/Beneficios";
+import { Respaldo } from "@/components/landing/Respaldo";
+import { Perfil } from "@/components/landing/Perfil";
+import { FAQ } from "@/components/landing/FAQ";
+import { Formulario } from "@/components/landing/Formulario";
+import { Footer } from "@/components/landing/Footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "RE/MAX Solución Almería — Asesor inmobiliario independiente" },
+      {
+        name: "description",
+        content:
+          "Emprende como asesor/a inmobiliario en Almería con el respaldo de RE/MAX. Sin local, sin empleados, sin inversión inicial. Flexibilidad total.",
+      },
+      { property: "og:title", content: "RE/MAX Solución Almería — Tu negocio inmobiliario" },
+      {
+        property: "og:description",
+        content:
+          "Modelo probado de asesor/a inmobiliario independiente con el respaldo de RE/MAX en Almería.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <Filtro />
+      <ComoFunciona />
+      <Beneficios />
+      <Respaldo />
+      <Perfil />
+      <FAQ />
+      <Formulario />
+      <Footer />
+    </main>
+  );
 }

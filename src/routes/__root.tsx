@@ -29,16 +29,29 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "RE/MAX Solución Almería — Asesor inmobiliario independiente" },
+      {
+        name: "description",
+        content:
+          "Emprende como asesor/a inmobiliario independiente en Almería con el respaldo de RE/MAX. Sin local, sin empleados, sin inversión inicial. Tú decides cuándo y cuánto trabajas.",
+      },
+      { name: "author", content: "RE/MAX Solución" },
+      { property: "og:title", content: "RE/MAX Solución Almería — Tu negocio inmobiliario sin riesgos" },
+      {
+        property: "og:description",
+        content:
+          "Modelo probado de asesor/a inmobiliario independiente con el respaldo de RE/MAX. Flexibilidad total, formación incluida.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
