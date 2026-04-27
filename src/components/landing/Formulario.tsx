@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
-const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20me%20interesa%20RE%2FMAX%20Soluci%C3%B3n";
+const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20he%20visitado%20la%20web%20de%20RE%2FMAX%20Soluci%C3%B3n%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%C2%BFPodemos%20hablar%3F";
 
 const schema = z.object({
   nombre: z.string().trim().min(2, "Introduce tu nombre").max(100),
@@ -155,7 +155,7 @@ export function Formulario() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
+            <form id="form_lead" onSubmit={handleSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <Label htmlFor="nombre">Nombre completo *</Label>
                 <Input id="nombre" name="nombre" autoComplete="name" maxLength={100} className="mt-1.5" />
@@ -248,7 +248,14 @@ export function Formulario() {
                 <Checkbox id="privacidad" name="privacidad" />
                 <Label htmlFor="privacidad" className="text-sm font-normal leading-snug">
                   He leído y acepto la{" "}
-                  <a href="#" className="text-primary underline">política de privacidad</a> *
+                  <a href="/politica-privacidad" target="_blank" className="text-primary underline hover:text-primary/80">
+                    política de privacidad
+                  </a>
+                  {" "}y el{" "}
+                  <a href="/aviso-legal" target="_blank" className="text-primary underline hover:text-primary/80">
+                    aviso legal
+                  </a>
+                  {" "}*
                 </Label>
               </div>
               {errors.privacidad && (

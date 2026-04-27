@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import mentorImg from "@/assets/alberto-alarcon.jpg";
 
 const WHATSAPP_URL =
-  "https://wa.me/34662257024?text=Hola%20Alberto%2C%20quiero%20m%C3%A1s%20info%20sobre%20RE%2FMAX%20Soluci%C3%B3n";
+  "https://wa.me/34662257024?text=Hola%20Alberto%2C%20he%20visitado%20la%20web%20de%20RE%2FMAX%20Soluci%C3%B3n%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20el%20modelo%20de%20asesor%20inmobiliario.%20%C2%BFCu%C3%A1ndo%20podr%C3%ADamos%20hablar%3F";
 
 const highlights = [
   "+25 años de trayectoria en el sector inmobiliario",

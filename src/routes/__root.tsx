@@ -3,6 +3,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import appCss from "../styles.css?url";
 import faviconImg from "@/assets/favicon.png";
 import { TRACKING } from "@/lib/tracking";
+import { CookieBanner } from "@/components/CookieBanner";
 
 function NotFoundComponent() {
   return (
@@ -153,6 +154,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
           </noscript>
         )}
         {children}
+        <CookieBanner />
         <Scripts />
       </body>
     </html>

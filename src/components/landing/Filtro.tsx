@@ -1,7 +1,7 @@
 import { X, Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20encajo%20en%20el%20perfil%20y%20quiero%20m%C3%A1s%20info";
+const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20he%20visitado%20la%20web%20de%20RE%2FMAX%20Soluci%C3%B3n%20y%20creo%20que%20encajo%20con%20el%20perfil%20de%20asesor%20inmobiliario.%20%C2%BFPodemos%20hablar%3F";
 
 const noItems = [
   "Buscas un empleo tradicional con nómina fija",

@@ -2,7 +2,7 @@ import { ArrowRight, MessageCircle, ShieldCheck, Globe2, Clock, ChevronDown } fr
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-asesora.jpg";
 
-const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20me%20interesa%20conocer%20el%20modelo%20de%20asesor%20RE%2FMAX%20Soluci%C3%B3n";
+const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20he%20visitado%20la%20web%20de%20RE%2FMAX%20Soluci%C3%B3n%20y%20me%20interesa%20conocer%20el%20modelo%20de%20asesor%20inmobiliario.%20%C2%BFPodemos%20hablar%3F";
 
 export function Hero() {
   return (
