@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
-const WHATSAPP_URL = "https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20RE%2FMAX%20Soluci%C3%B3n";
+const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20me%20interesa%20RE%2FMAX%20Soluci%C3%B3n";
 
 const schema = z.object({
   nombre: z.string().trim().min(2, "Introduce tu nombre").max(100),
@@ -228,7 +228,7 @@ export function Formulario() {
                 WhatsApp
               </Button>
             </a>
-            <a href="tel:+34000000000" id="cta_final_llamar">
+            <a href="tel:+34662257024" id="cta_final_llamar">
               <Button variant="outlineLight" size="lg">
                 <Phone className="h-5 w-5" />
                 Llamar ahora

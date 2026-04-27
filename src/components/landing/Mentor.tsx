@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import mentorImg from "@/assets/alberto-alarcon.jpg";
 
 const WHATSAPP_URL =
-  "https://wa.me/34000000000?text=Hola%20Alberto%2C%20quiero%20m%C3%A1s%20info%20sobre%20RE%2FMAX%20Soluci%C3%B3n";
+  "https://wa.me/34662257024?text=Hola%20Alberto%2C%20quiero%20m%C3%A1s%20info%20sobre%20RE%2FMAX%20Soluci%C3%B3n";
 
 const highlights = [
   "+25 años de trayectoria en el sector inmobiliario",

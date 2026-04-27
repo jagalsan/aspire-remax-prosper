@@ -31,12 +31,12 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
-                <a href="tel:+34000000000" className="hover:text-white">+34 000 000 000</a>
+                <a href="tel:+34662257024" className="hover:text-white">+34 662 25 70 24</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-primary" />
-                <a href="mailto:info@remaxsolucion.es" className="hover:text-white">
-                  info@remaxsolucion.es
+                <a href="mailto:alberto.alarcon@remax.es" className="hover:text-white">
+                  alberto.alarcon@remax.es
                 </a>
               </li>
             </ul>

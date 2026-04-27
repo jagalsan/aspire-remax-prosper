@@ -2,7 +2,7 @@ import { ArrowRight, MessageCircle, ShieldCheck, Globe2, Clock } from "lucide-re
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-asesora.jpg";
 
-const WHATSAPP_URL = "https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20conocer%20el%20modelo%20de%20asesor%20RE%2FMAX%20Soluci%C3%B3n";
+const WHATSAPP_URL = "https://wa.me/34662257024?text=Hola%2C%20me%20interesa%20conocer%20el%20modelo%20de%20asesor%20RE%2FMAX%20Soluci%C3%B3n";
 
 export function Hero() {
   return (

@@ -70,7 +70,7 @@ export function Respaldo() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <a href="tel:+34000000000" id="cta_respaldo_llamar">
+          <a href="tel:+34662257024" id="cta_respaldo_llamar">
             <Button variant="hero" size="xl">
               <Phone className="h-5 w-5" />
               Llamar ahora
