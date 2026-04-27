@@ -57,11 +57,25 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/80">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>Oficina Roquetas de Mar — Almería</span>
+                <a
+                  href="https://maps.app.goo.gl/GgkQithwwXX2Qzeh9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Oficina Roquetas de Mar — Almería
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>Oficina Almería capital</span>
+                <a
+                  href="https://maps.app.goo.gl/DKGRkhBJsFhBT3xG8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Oficina Almería capital
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
