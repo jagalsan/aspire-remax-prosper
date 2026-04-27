@@ -12,11 +12,11 @@ const faqs = [
   },
   {
     q: "¿Cuánto puedo ganar?",
-    a: "No hay límite. Trabajas por comisiones: cuantas más operaciones cierres, más ganas. Los primeros meses son de construcción de cartera. Asesores consolidados facturan entre 30K–80K€/año según dedicación.",
+    a: "No hay límite. Trabajas a honorarios por cada operación cerrada: cuantas más ventas cierres, más facturas. Los primeros meses son de construcción de cartera. Asesores consolidados facturan entre 30K–80K€/año según dedicación.",
   },
   {
     q: "¿Necesito experiencia inmobiliaria previa?",
-    a: "No. Buscamos experiencia comercial, no técnica inmobiliaria. Te formamos en valoraciones, documentación, captación y negociación. Lo que no te podemos enseñar es a vender: eso ya lo traes tú.",
+    a: "No. Buscamos experiencia comercial, no técnica inmobiliaria. Alberto Alarcón —con más de 25 años en el sector— te formará en valoraciones, documentación, captación y negociación. Lo que no te podemos enseñar es a vender: eso ya lo traes tú.",
   },
   {
     q: "¿Cuánto tiempo tengo que dedicar?",
@@ -24,11 +24,11 @@ const faqs = [
   },
   {
     q: "¿Esto es multinivel o pirámide?",
-    a: "No. Eres asesor/a inmobiliario independiente. Cobras comisiones por tus operaciones cerradas. No captas a nadie, no vendes productos raros, no tienes equipo debajo. RE/MAX es una franquicia seria con 50 años de trayectoria.",
+    a: "No. Eres asesor/a inmobiliario independiente. Cobras honorarios por tus operaciones cerradas. No captas a nadie, no vendes productos raros, no tienes equipo debajo. RE/MAX Solución es una franquicia seria con presencia consolidada en Almería.",
   },
   {
     q: "¿Tendré apoyo o estaré solo/a?",
-    a: "Tendrás acompañamiento del equipo RE/MAX Solución: formación inicial, acceso a herramientas corporativas (CRM, marketing, legal), mentoring y red de asesores para compartir experiencias.",
+    a: "Tendrás acompañamiento continuo de Alberto Alarcón, tu mentor personal con más de 25 años en el sector inmobiliario almeriense. Él te guía paso a paso: formación inicial, estrategia comercial, primeras captaciones, negociación y cierres. Además contarás con la cultura colaborativa del equipo de RE/MAX Solución y herramientas tecnológicas de primer nivel.",
   },
 ];
 
