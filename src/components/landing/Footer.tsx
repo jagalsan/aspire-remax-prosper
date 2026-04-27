@@ -33,6 +33,21 @@ export function Footer() {
               Asesores inmobiliarios independientes con el respaldo de la marca líder mundial.
               Almería · Poniente.
             </p>
+
+            <div className="mt-5 flex items-center gap-3">
+              {SOCIALS.map(({ name, href, Icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`RE/MAX Solución en ${name}`}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-primary hover:text-primary-foreground"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>
