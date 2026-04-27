@@ -37,7 +37,7 @@ export function Formulario() {
   const [enviando, setEnviando] = useState(false);
   const [rechazadoAutonomo, setRechazadoAutonomo] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const data = {
@@ -75,11 +75,26 @@ export function Formulario() {
 
     setErrors({});
     setEnviando(true);
-    // Simulated submit — wire to backend later
-    setTimeout(() => {
-      setEnviando(false);
+
+    // Enviar datos a Google Sheets
+    try {
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx48zZ55-8be-f3C860AH6rkDfgMvJSGWbUb7XzCdR3ofR3GZTxmbSkkWhalSMoOJSxKQ/exec";
+
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify(data),
+      });
+
       setEnviado(true);
-    }, 800);
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      alert("Hubo un problema al enviar tu solicitud. Por favor, intenta de nuevo o contáctanos por WhatsApp.");
+    } finally {
+      setEnviando(false);
+    }
   };
 
   return (
