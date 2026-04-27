@@ -6,19 +6,20 @@ const WHATSAPP_URL = "https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20c
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
+    <section id="top" className="relative overflow-hidden bg-navy">
+      <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Asesora inmobiliaria trabajando desde una terraza luminosa en Almería"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center"
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-hero" />
+        {/* Overlay: dark on mobile for readability, lighter on desktop where the image breathes */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/30 lg:from-navy/85 lg:via-navy/55 lg:to-transparent" />
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-32">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-32">
         <div className="flex flex-col justify-center text-white">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
             <ShieldCheck className="h-4 w-4" />

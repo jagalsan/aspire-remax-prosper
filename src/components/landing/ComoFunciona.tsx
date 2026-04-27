@@ -18,9 +18,9 @@ const pasos = [
   {
     num: "03",
     icon: TrendingUp,
-    title: "Cobra por cada operación cerrada",
-    duration: "Comisiones competitivas",
-    body: "Sistema de comisiones líder del sector. Tú gestionas tu negocio, nosotros te damos la estructura, la marca y el acompañamiento.",
+    title: "Cobra honorarios por cada operación cerrada",
+    duration: "Honorarios competitivos",
+    body: "Sistema de honorarios líder del sector por cada venta. Tú gestionas tu negocio, nosotros te damos la estructura, la marca y el acompañamiento personal de Alberto Alarcón.",
   },
 ];
 

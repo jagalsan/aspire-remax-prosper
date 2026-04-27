@@ -16,6 +16,9 @@ export function Navbar() {
           <a href="#como-funciona" className="text-muted-foreground transition-colors hover:text-foreground">
             Cómo funciona
           </a>
+          <a href="#mentor" className="text-muted-foreground transition-colors hover:text-foreground">
+            Tu mentor
+          </a>
           <a href="#beneficios" className="text-muted-foreground transition-colors hover:text-foreground">
             Beneficios
           </a>

@@ -1,4 +1,4 @@
-import { Phone, Award, MapPin, Users, Wrench } from "lucide-react";
+import { Phone, Award, MapPin, Users, Wrench, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import oficina from "@/assets/oficina-remax.jpg";
 
@@ -10,9 +10,10 @@ const global = [
 ];
 
 const local = [
-  { icon: MapPin, text: "Oficina en Roquetas de Mar (Almería)" },
-  { icon: Award, text: "Conocimiento profundo del mercado del Poniente" },
-  { icon: Users, text: "Acompañamiento y mentoring continuo" },
+  { icon: MapPin, text: "2 oficinas: Roquetas de Mar y Almería capital" },
+  { icon: Award, text: "Conocimiento profundo del mercado almeriense" },
+  { icon: Users, text: "Acompañamiento personal de Alberto Alarcón (+25 años en el sector)" },
+  { icon: HeartHandshake, text: "Gran ayuda entre compañeros: cultura colaborativa real" },
   { icon: Wrench, text: "Red de contactos y sinergias entre asesores" },
 ];
 
@@ -37,6 +38,9 @@ export function Respaldo() {
           <h2 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
             Por qué <span className="text-primary">RE/MAX Solución</span> en Almería
           </h2>
+          <p className="mt-4 text-lg text-white/80">
+            La fuerza de una marca global con la cercanía de un equipo local que te conoce por tu nombre.
+          </p>
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">

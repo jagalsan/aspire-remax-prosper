@@ -5,6 +5,7 @@ import { Filtro } from "@/components/landing/Filtro";
 import { ComoFunciona } from "@/components/landing/ComoFunciona";
 import { Beneficios } from "@/components/landing/Beneficios";
 import { Respaldo } from "@/components/landing/Respaldo";
+import { Mentor } from "@/components/landing/Mentor";
 import { Perfil } from "@/components/landing/Perfil";
 import { FAQ } from "@/components/landing/FAQ";
 import { Formulario } from "@/components/landing/Formulario";
@@ -39,6 +40,7 @@ function Index() {
       <ComoFunciona />
       <Beneficios />
       <Respaldo />
+      <Mentor />
       <Perfil />
       <FAQ />
       <Formulario />
