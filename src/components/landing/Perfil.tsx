@@ -34,8 +34,8 @@ export function Perfil() {
             ¿Eres el <span className="text-primary">perfil que buscamos?</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Buscamos personas con experiencia comercial que quieran iniciar un negocio propio
-            sin los riesgos tradicionales.
+            Buscamos personas con experiencia comercial que quieran crear su propio negocio
+            como asesores inmobiliarios independientes con el respaldo de RE/MAX.
           </p>
 
           <ul className="mt-8 space-y-4">

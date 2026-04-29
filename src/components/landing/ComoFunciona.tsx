@@ -11,9 +11,9 @@ const pasos = [
   {
     num: "02",
     icon: Target,
-    title: "Construye tu cartera de clientes",
-    duration: "Tu ritmo, tu zona",
-    body: "Con las herramientas de RE/MAX: CRM, materiales de marketing, respaldo de marca global. Tu estrategia, tu zona del Poniente almeriense.",
+    title: "Desarrolla tu negocio en tu zona",
+    duration: "Tu ritmo, tu territorio",
+    body: "Elige dónde quieres trabajar en la provincia de Almería. Con las herramientas de RE/MAX: CRM, materiales de marketing y respaldo de marca global para construir tu cartera.",
   },
   {
     num: "03",
@@ -37,8 +37,8 @@ export function ComoFunciona() {
             <span className="block text-primary">asesor/a inmobiliario independiente</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Sin inversión en local, sin horarios fijos, sin empleados. Tú aportas el talento comercial,
-            RE/MAX te da las herramientas.
+            Creas tu propio negocio como autónomo/a. Tú aportas el talento comercial,
+            RE/MAX te da formación, herramientas, marca y 2 oficinas donde trabajar.
           </p>
         </div>
 

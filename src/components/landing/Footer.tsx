@@ -31,7 +31,7 @@ export function Footer() {
             </div>
             <p className="mt-3 max-w-xs text-sm text-white/70">
               Asesores inmobiliarios independientes con el respaldo de la marca líder mundial.
-              Almería · Poniente.
+              Provincia de Almería.
             </p>
 
             <div className="mt-5 flex items-center gap-3">
@@ -103,7 +103,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/60">
-          © {new Date().getFullYear()} RE/MAX Solución — Estamos en Almería y en Roquetas de Mar. Todos los derechos reservados.
+          © {new Date().getFullYear()} RE/MAX Solución — Oficinas en Almería capital y Roquetas de Mar. Todos los derechos reservados.
         </div>
       </div>
     </footer>

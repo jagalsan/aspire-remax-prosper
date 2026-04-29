@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     q: "¿Cuánto tengo que invertir?",
-    a: "No necesitas inversión inicial para local, stock o empleados. Sí debes darte de alta como autónomo/a (cuota mensual según tu situación) y asumir pequeños gastos operativos (móvil, transporte, materiales básicos).",
+    a: "No necesitas inversión inicial. RE/MAX Solución te proporciona 2 oficinas (Almería capital y Roquetas de Mar) para trabajar. Debes darte de alta como autónomo/a (cuota mensual según tu situación) y asumir pequeños gastos operativos (móvil, transporte, materiales básicos).",
   },
   {
     q: "¿Cuánto puedo ganar?",

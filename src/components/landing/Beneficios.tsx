@@ -3,13 +3,13 @@ import { Building2, User, Globe2, Clock4 } from "lucide-react";
 const items = [
   {
     icon: Building2,
-    title: "Sin inversión inicial",
-    body: "No necesitas local. Trabaja desde las oficinas de RE/MAX Solución en Almería capital o Roquetas de Mar, o desde tu propia casa.",
+    title: "2 oficinas a tu disposición",
+    body: "Tienes acceso a nuestras oficinas en Almería capital y Roquetas de Mar para reuniones, formación y trabajo. También puedes trabajar desde donde prefieras.",
   },
   {
     icon: User,
-    title: "Sin empleados",
-    body: "Negocio unipersonal. No contrates, no gestiones nóminas. Tú eres el único responsable de tu éxito.",
+    title: "Tu propio negocio",
+    body: "Trabajas como autónomo/a sin empleados ni nóminas. Tú gestionas tu tiempo, tus clientes y tu crecimiento con total autonomía.",
   },
   {
     icon: Globe2,
