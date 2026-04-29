@@ -76,7 +76,7 @@ export function Hero() {
       </div>
 
       <a
-        href="#perfil"
+        href="#filtro"
         aria-label="Desplázate para ver más"
         className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/80 transition hover:text-white sm:flex"
       >
