@@ -141,11 +141,11 @@ fbq('track', 'PageView');`,
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {/* GTM noscript fallback */}
         {TRACKING.GTM_ID && (
           <noscript>

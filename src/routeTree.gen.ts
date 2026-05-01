@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PoliticaPrivacidadRouteImport } from './routes/politica-privacidad'
 import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiSendLeadRouteImport } from './routes/api.send-lead'
 
 const PoliticaPrivacidadRoute = PoliticaPrivacidadRouteImport.update({
   id: '/politica-privacidad',
@@ -28,35 +29,49 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSendLeadRoute = ApiSendLeadRouteImport.update({
+  id: '/api/send-lead',
+  path: '/api/send-lead',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aviso-legal': typeof AvisoLegalRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/api/send-lead': typeof ApiSendLeadRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-legal': typeof AvisoLegalRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/api/send-lead': typeof ApiSendLeadRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aviso-legal': typeof AvisoLegalRoute
   '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/api/send-lead': typeof ApiSendLeadRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/aviso-legal' | '/politica-privacidad'
+  fullPaths: '/' | '/aviso-legal' | '/politica-privacidad' | '/api/send-lead'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/aviso-legal' | '/politica-privacidad'
-  id: '__root__' | '/' | '/aviso-legal' | '/politica-privacidad'
+  to: '/' | '/aviso-legal' | '/politica-privacidad' | '/api/send-lead'
+  id:
+    | '__root__'
+    | '/'
+    | '/aviso-legal'
+    | '/politica-privacidad'
+    | '/api/send-lead'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisoLegalRoute: typeof AvisoLegalRoute
   PoliticaPrivacidadRoute: typeof PoliticaPrivacidadRoute
+  ApiSendLeadRoute: typeof ApiSendLeadRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +97,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/send-lead': {
+      id: '/api/send-lead'
+      path: '/api/send-lead'
+      fullPath: '/api/send-lead'
+      preLoaderRoute: typeof ApiSendLeadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +111,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisoLegalRoute: AvisoLegalRoute,
   PoliticaPrivacidadRoute: PoliticaPrivacidadRoute,
+  ApiSendLeadRoute: ApiSendLeadRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

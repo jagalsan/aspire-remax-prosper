@@ -36,6 +36,7 @@ export function Formulario() {
   const [enviado, setEnviado] = useState(false);
   const [enviando, setEnviando] = useState(false);
   const [rechazadoAutonomo, setRechazadoAutonomo] = useState(false);
+  const [errorEnvio, setErrorEnvio] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -74,24 +75,27 @@ export function Formulario() {
     }
 
     setErrors({});
+    setErrorEnvio(false);
     setEnviando(true);
 
-    // Enviar datos a Google Sheets
+    // Enviar datos al servidor (que enviará email + Google Sheets)
     try {
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx48zZ55-8be-f3C860AH6rkDfgMvJSGWbUb7XzCdR3ofR3GZTxmbSkkWhalSMoOJSxKQ/exec";
-
-      await fetch(GOOGLE_SCRIPT_URL, {
+      const response = await fetch("/api/send-lead", {
         method: "POST",
         headers: {
-          "Content-Type": "text/plain;charset=utf-8",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
 
+      if (!response.ok) {
+        throw new Error("Error al enviar el formulario");
+      }
+
       setEnviado(true);
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
-      alert("Hubo un problema al enviar tu solicitud. Por favor, intenta de nuevo o contáctanos por WhatsApp.");
+      setErrorEnvio(true);
     } finally {
       setEnviando(false);
     }
@@ -153,6 +157,32 @@ export function Formulario() {
                 Gracias. Nos pondremos en contacto contigo en menos de 24 horas hábiles
                 para contarte el siguiente paso.
               </p>
+            </div>
+          ) : errorEnvio ? (
+            <div className="flex flex-col items-center py-12 text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10">
+                <X className="h-8 w-8 text-destructive" strokeWidth={2.5} />
+              </div>
+              <h3 className="mt-4 text-2xl font-bold">Error al enviar</h3>
+              <p className="mt-2 max-w-md text-muted-foreground">
+                Hubo un problema al enviar tu solicitud. Por favor, intenta de nuevo 
+                o contáctanos directamente por WhatsApp.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => setErrorEnvio(false)}
+                >
+                  Intentar de nuevo
+                </Button>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <Button variant="whatsapp" size="lg">
+                    <MessageCircle className="h-5 w-5" />
+                    Contactar por WhatsApp
+                  </Button>
+                </a>
+              </div>
             </div>
           ) : (
             <form id="form_lead" onSubmit={handleSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
