@@ -103,7 +103,18 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/60">
-          © {new Date().getFullYear()} RE/MAX Solución — Oficinas en Almería capital y Roquetas de Mar. Todos los derechos reservados.
+          <p>© {new Date().getFullYear()} RE/MAX Solución — Oficinas en Almería capital y Roquetas de Mar. Todos los derechos reservados.</p>
+          <p className="mt-2">
+            Diseñado con ❤️ por{" "}
+            <a
+              href="https://lacocherastudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-white"
+            >
+              La Cochera
+            </a>
+          </p>
         </div>
       </div>
     </footer>
