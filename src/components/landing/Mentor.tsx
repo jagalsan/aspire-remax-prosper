@@ -54,9 +54,9 @@ export function Mentor() {
           <div className="mt-8 rounded-2xl border-l-4 border-primary bg-card p-6 shadow-soft">
             <Quote className="h-6 w-6 text-primary" />
             <p className="mt-2 text-lg italic text-foreground">
-              &ldquo;Mi compromiso es que en 12 meses tengas un negocio sólido.
-              No te enseño teoría: te enseño lo que funciona en la calle, en
-              Almería, hoy.&rdquo;
+              &ldquo;Mi compromiso es acompañarte para que aprendas una profesión y
+              construyas tu negocio con formación, herramientas y trabajo constante.
+              Los resultados dependen de tu dedicación, aprendizaje y evolución.&rdquo;
             </p>
             <p className="mt-3 text-sm font-semibold text-foreground">
               — Alberto Alarcón, mentor de RE/MAX Solución

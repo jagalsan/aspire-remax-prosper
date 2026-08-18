@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import perfilImg from "@/assets/seccion-perfil.jpg";
 
 const perfilItems = [
-  "Mayores de 40 años con trayectoria profesional",
   "Experiencia en ventas, comercio, banca, seguros, hostelería o negocio propio",
-  "Situación económica estable (pareja, otro negocio o ahorros)",
   "Mentalidad emprendedora y disciplina para construir a medio plazo",
   "Capacidad de trabajar de forma autónoma (alta como autónomo/a obligatoria)",
 ];
@@ -48,8 +46,9 @@ export function Perfil() {
           </ul>
 
           <p className="mt-8 rounded-xl border-l-4 border-primary bg-primary-soft/40 p-5 text-foreground">
-            <strong>No importa si nunca has trabajado en inmobiliario.</strong> Importa tu actitud,
-            tu red de contactos y tu capacidad de vender.
+            <strong>No necesitas experiencia inmobiliaria previa.</strong> Valoramos las ganas de
+            aprender, la iniciativa, el trato humano, la escucha, la responsabilidad, la constancia
+            y la orientación al cliente.
           </p>
 
           <a href="#formulario" id="cta_perfil_form" className="mt-8 inline-block">

@@ -40,6 +40,9 @@ export function ComoFunciona() {
             Creas tu propio negocio como autónomo/a. Tú aportas el talento comercial,
             RE/MAX te da formación, herramientas, marca y 2 oficinas donde trabajar.
           </p>
+          <p className="mt-4 rounded-xl border border-border bg-card p-4 text-sm text-muted-foreground">
+            <strong className="text-foreground">Importante:</strong> No existe sueldo fijo, nómina ni contrato laboral, y no se garantizan ingresos ni resultados.
+          </p>
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">

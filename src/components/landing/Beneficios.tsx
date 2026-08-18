@@ -29,11 +29,11 @@ export function Beneficios() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">
-            Sin riesgos
+            Con estructura y acompañamiento
           </span>
           <h2 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Emprende sin los riesgos de un
-            <span className="block text-primary">negocio tradicional</span>
+            Una estructura y acompañamiento que reducen
+            <span className="block text-primary">las barreras iniciales</span>
           </h2>
         </div>
 

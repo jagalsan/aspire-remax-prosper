@@ -88,6 +88,13 @@ export const Route = createRootRoute({
       },
     ],
     scripts: [
+      // HubSpot Tracking Code
+      {
+        src: "https://js-eu1.hs-scripts.com/148900858.js",
+        async: true,
+        defer: true,
+        id: "hs-script-loader",
+      },
       // Google Tag Manager
       ...(TRACKING.GTM_ID
         ? [
