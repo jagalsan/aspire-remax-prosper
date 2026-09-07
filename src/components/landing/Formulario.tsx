@@ -14,6 +14,37 @@ export function Formulario() {
       script.defer = true;
       document.head.appendChild(script);
     }
+
+    // Listener para evento de envío exitoso de HubSpot
+    const handleFormSubmit = (event: MessageEvent) => {
+      // Validar que el evento viene de HubSpot
+      if (!event.data || typeof event.data !== 'object') return;
+      
+      const { type, eventName, id } = event.data;
+      
+      // Verificar que es el callback de HubSpot y que es el evento de envío exitoso
+      if (type === 'hsFormCallback' && eventName === 'onFormSubmitted') {
+        console.log('HubSpot form submitted successfully:', { formId: id });
+        
+        // Disparar evento Lead de Meta Pixel solo después de envío exitoso
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+          try {
+            (window as any).fbq('track', 'Lead');
+            console.log('✅ Meta Pixel: Lead event triggered');
+          } catch (error) {
+            console.error('❌ Error triggering Meta Pixel Lead event:', error);
+          }
+        } else {
+          console.warn('⚠️ Meta Pixel (fbq) not available - Lead event not triggered');
+        }
+      }
+    };
+
+    window.addEventListener('message', handleFormSubmit);
+
+    return () => {
+      window.removeEventListener('message', handleFormSubmit);
+    };
   }, []);
 
   return (

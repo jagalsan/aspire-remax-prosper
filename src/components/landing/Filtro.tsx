@@ -15,7 +15,7 @@ const yesItems = [
   "Buscas flexibilidad y autonomía para gestionar tu tiempo",
   "Quieres construir un patrimonio a medio plazo (no ingresos rápidos)",
   "Estás preparado/a para iniciar como autónomo/a y construir tu cartera",
-  "Tienes estabilidad económica mientras creces (pareja, otro negocio, ahorros)",
+  "Comprendes que los resultados dependen del trabajo, la constancia, el aprendizaje y la evolución, sin ingresos garantizados",
 ];
 
 export function Filtro() {
